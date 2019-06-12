@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Personal Information</title>
+  
+</head>
+<body >
+  <center>
+    <form class="container">
+      <table>
+        <tr>
+          <td>Name</td>
+          <td><input type="" name="" id="name"></td>
+        </tr>
+        <tr>
+          <td>email</td>
+          <td><input type="email" name="" id="email"></td>
+        </tr>
+        <tr>
+          <td>Country</td>
+          <td><select id="country"></select></td>
+        </tr>
+        <tr>
+          <td>Region</td>
+          <td><select id="region"></select></td>
+        </tr>
+        <tr >
+          <td class="submit" onclick="registration()"><button>Submit</button>
+        </tr>
+      </table>
+    </form>
+  </center>
+  <script type="text/javascript" src="jsonp.js"></script>
+  <script src="http://battuta.medunes.net/api/country/all/?key=b54c942e0959e98dd9240ad02e7330c1&callback=cb"></script>
+
+    
+</body>
+</html>
