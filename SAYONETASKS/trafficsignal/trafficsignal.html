@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TrafficSignal</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="traffic.js"></script>
+</head>
+<body>
+	<center>
+		<div class="container">
+			
+			<svg class="circle" height="200" width="200">
+				<circle cx="100" cy="100" style="fill:black;" r="70" id="red"></svg>
+
+					<svg class="circle" height="200" width="200" >
+				<circle cx="100" cy="100" r="70" id="yellow" style="fill: black"></svg>
+
+					<svg class="circle" height="200" width="200">
+				<circle cx="100" cy="100" r="70" id="green" style="fill: black" ></svg>
+
+			</svg>
+			<div class="wrapper">
+				<button onclick="stop()">STOP</button>
+				<button onclick="onlyGreen()">GREEN</button>
+				<button onclick="onlyRed()">RED</button>
+				<button onclick="onlyYellow()">YELLOW</button>
+				<button onclick="auto()">AUTO</button>
+				<button onclick="blinkYellow()">ALERT</button>
+			</div>
+			
+		</div>
+	</center>
+
+</body>
+</html>
