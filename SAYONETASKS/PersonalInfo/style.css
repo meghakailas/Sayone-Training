@@ -1,0 +1,22 @@
+.container{
+
+	
+	
+	height: 100%;
+	
+	
+}
+table{
+border:1px solid black; 
+height:200px;
+font-size: 18px;
+
+}
+tr{
+	padding-top: 20px;
+}
+
+
+.submit{
+	padding-left: 100px;
+}
