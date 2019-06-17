@@ -1,0 +1,200 @@
+a{
+	float: right;
+	display: block;
+	text-decoration: none;
+	padding: 1%;
+	color: grey;
+	font-size: 12px;
+
+}
+
+.second{
+	height:100px;
+
+	border-bottom: 0.5px solid grey;
+
+}
+
+.secondleft:{
+	width:50%;
+	height:100px;
+}
+
+.second img{
+	height: 100%;
+	width:20%;
+	float: left;
+}
+
+.secondright{
+	height:100px;
+}
+
+.third{
+	
+	
+	margin-top: 0px;
+	font-family: Courier New, Courier, monospace;
+	height:40px;
+	
+
+
+}
+
+.third a{
+	float:left;
+	font-size: 15px;
+	
+}
+.fourth{
+	height:550px;
+	
+	
+}
+.container{
+	height: 100%;
+	width:500px;
+	
+	margin: 20px ;
+	overflow:auto;
+}
+
+.slider-inner{
+	width: 700px;
+	height:500px;
+	position: relative;
+	overflow: hidden;
+	float: left;
+	padding: 3px;
+	
+}
+
+.slider-inner img{
+	width: 600px;
+	height: 500px;
+	display:none;
+	margin-left: 40px;
+}
+
+.slider-inner img.active{
+	display: inline-block;
+}
+
+.prev,.next{
+	float:left;
+	margin-top: 250px;
+	cursor: pointer;
+}
+
+.prev{
+	position: relative;
+	margin-right: -45px;
+	z-index: 100;
+}
+
+.next{
+	position: relative;
+	margin-left: -45px;
+	z-index: 100; 
+}
+
+.fourth-right{
+	float: right;
+	margin-right: 130px;
+	padding-right: 0px;
+	font-family: Courier New, Courier, monospace; 
+	width:325px;
+	
+}
+
+a.size:hover{
+	background-color: #666;
+}
+
+.fifth{
+	height: 400px;
+	width:100%;
+	float:left;
+}
+
+.form-popup{
+	z-index: 9;
+	height: 300px;
+	width: 500px;
+	background-color: grey;
+}
+
+
+
+
+.form-loginpopup {
+
+ height: 270px;
+
+ width: 360px;
+
+ display: none;
+
+ position: fixed;
+
+ margin-top: 50px;
+
+ border: 3px solid #f0f0f5
+
+;
+
+ z-index: 9;
+
+ padding-left: 10px;
+
+ background-color: #f0f0f5;
+
+ margin-bottom: 50px;
+
+ color: black;
+ float: right;
+
+}
+
+.signinbtn{
+
+    height: 25px;
+
+    width: 100px;
+
+    color: black;
+
+    margin-top: 2px;
+
+    border-radius: 8px;
+
+    border:2px solid #fcc508
+
+;
+
+    background-color: #ffffff
+
+;}
+
+.form-loginpopup input{
+
+    color: black;
+
+    font-size: 15px;
+
+    border-radius: 10px;
+
+    height: 30px;
+
+    width: 300px;
+
+    align-self: center;
+
+    padding-left: 5px;
+
+    border:2px solid darkorange;
+
+    background-color: #ffffff
+
+;}
+
