@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Details Page</h1>
+{{ question.question_text }}
+<p> Your Options are:
+<ul>
+{% for choice in question.choice_set.all %}
+	<li>
+		{{ choice.choice_text }}
+	</li>	
+
+
+{% endfor %}
+</ul>
+<a href="{% url 'poll:vote' question.id %}">Want to Vote?</a>
+</p>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Index Page</h1>
+<h2>Question List</h2>
+	
+	<p>
+<ul>
+{% for question in question_list %}
+<li>
+	<a style="text-decoration: none;" href="{% url 'poll:vote' question.id %}">{{ question.question_text }}</a>
+</li>
+<!-- <li>{{ question.pk }}-<a href="poll/{{ question.pk }}/">{{ question.question_text }}</a> </li>
+ -->
+ {% endfor %}
+</ul>
+</p>
+{% endblock %}
