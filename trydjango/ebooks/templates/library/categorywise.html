@@ -1,0 +1,37 @@
+{% extends "register/base1.html" %}
+
+{% load staticfiles %}
+
+{% block body_block %}
+    {% for book in books %}
+    <table>
+        <th>{{ book.bname|upper }}</th>
+        <tr>
+            <td><img style=" width:200px;height:200px" src="{{ book.image.url }}"> </td>
+        </tr><br>
+        <tr>
+            <td>Author :</td><td>{{ book.author }}</td>
+        </tr><br>
+
+        <tr>
+            <td>Publisher :</td><td>{{ book.publisher }}</td>
+        </tr><br>
+        <tr>
+            <td>Price :</td><td>{{ book.price }}</td>
+        </tr>
+
+        <tr>
+            {% if user.is_authenticated %}
+            <td>   <li><a href="{% url 'library:download' book.id %}">Download</a></li>
+            </td>
+        {% else %}
+            <td>
+                <li>Interested?<a href="{% url 'register:registeruser' %}">Register Now!!!</a></li>
+            </td>
+            {% endif %}
+        </tr>
+
+
+    </table>
+    {% endfor %}
+{% endblock %}

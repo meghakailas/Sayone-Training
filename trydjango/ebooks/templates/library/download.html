@@ -1,0 +1,25 @@
+{% extends "register/base1.html" %}
+
+{% load staticfiles %}{% block body_block %}
+
+
+
+
+<table>
+    <tr><td><img style=" width:200px;height:200px" src="{{ book.image.url }}"> </td>
+        <td>{{ book.bname }}</td>
+    </tr>
+    <tr>
+        <td>Download Here:</td>
+         <td><li><a href="{{ book.download.url }}">{{ book.download.url }}</a></li></td>
+    </tr>
+</table>
+
+
+
+
+
+<p>About :
+    {{ book.review|truncatewords:10 }}
+</p>
+{% endblock %}
