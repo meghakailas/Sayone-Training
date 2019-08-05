@@ -1,0 +1,36 @@
+{% extends 'register/adminbase.html' %}
+{% block body_block %}
+{% if results %}
+    {% for book in results %}
+         <table>
+        <th>{{ book.bname|upper }}</th>
+        <tr>
+            <td><img style=" width:200px;height:200px" src="{{ book.image.url }}"> </td>
+        </tr><br>
+        <tr>
+            <td>Author :</td><td>{{ book.author }}</td>
+        </tr><br>
+        <tr>
+            <td>Category :</td><td>{{ book.category }}</td>
+        </tr><br>
+        <tr>
+            <td>Publisher :</td><td>{{ book.publisher }}</td>
+        </tr><br>
+        <tr>
+            <td>Price :</td><td>{{ book.price }}</td>
+        </tr>
+
+             <tr>
+
+            <td>   <li><a href="{% url 'admapp:deletebooksconfirm' book.id %}">Delete?</a></li>
+            </td>
+
+        </tr>
+
+    </table>
+  <p>About :
+    {{ book.review }}
+</p>
+        {% endfor %}
+{% endif %}
+{% endblock %}

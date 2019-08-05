@@ -1,0 +1,37 @@
+
+
+.nav a{
+    color: white ;
+    font-size: 1.5em !important;
+    }
+.nav li{
+    padding-right:5px;
+   }
+
+
+li a {
+
+  color: blue;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+.footer {
+   position:fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+   font-size:1.5em;
+}
+.sideheading{
+font-size:12px;
+margin-left:0px;
+}

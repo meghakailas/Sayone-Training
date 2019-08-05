@@ -1,0 +1,16 @@
+{% extends "register/adminbase.html" %}
+
+{% load staticfiles %}{% block body_block %}
+
+<div class="container">
+{% load crispy_forms_tags %}
+<form method="POST" enctype="multipart/form-data">{% csrf_token %}
+{{ form|crispy }}
+<button value="Submit" name="submit">Add</button>
+</form>
+{% load crispy_forms_tags %}
+
+</div>
+
+{% endblock %}
+

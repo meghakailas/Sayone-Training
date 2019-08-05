@@ -1,0 +1,18 @@
+{% extends "register/adminbase.html" %}
+
+{% load staticfiles %}{% block body_block %}
+<body>
+{% for book in books %}
+<div class="container">
+        <table class="table table-bordered">
+    <tr>
+        <td>
+            {{ book.bname }}
+
+
+     <a href="{% url 'admapp:deletebooksconfirm' book.id %}" >Delete?</a></td><br>
+    </tr>
+        </table>
+</div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "register/base1.html" %}
+
+{% load staticfiles %}{% block body_block %}
+  <div class="container">
+
+      {% if registered %}
+        <h1>Thank you for registering!</h1>
+      {% else %}
+        <h1>Register Here</h1>
+      {% load crispy_forms_tags %}
+
+      <form enctype="multipart/form-data" method="POST">
+          {% csrf_token %}
+          {{ user_form|crispy }}
+          {{ profile_form|crispy }}
+          <input type="submit" name="submit" value="Submit">
+
+        </form>
+
+      {% endif %}
+    {% load crispy_forms_tags %}
+    </div>
+  </div>
+{% endblock %}
+
+

@@ -1,0 +1,66 @@
+{% extends "register/base1.html" %}
+
+{% load staticfiles %}
+
+{% block body_block %}
+    {% for book in book_list %}
+    <table>
+        <th>{{ book.bname }}</th>
+        <tr>
+            <td><img style=" width:200px;height:200px" src="{{ book.image.url }}"> </td>
+        </tr><br>
+        <tr>
+            <td>Author :</td><td>{{ book.author }}</td>
+        </tr><br>
+        <tr>
+            <td>Category :</td><td>{{ book.category }}</td>
+        </tr><br>
+        <tr>
+            <td>Publisher :</td><td>{{ book.publisher }}</td>
+        </tr><br>
+        <tr>
+            <td>Price :</td><td>{{ book.price }}</td>
+        </tr>
+
+        <tr>
+            {% if user.is_authenticated %}
+            <td>   <li><a href="{% url 'library:download' book.id %}">Download</a></li>
+            </td>
+        {% else %}
+            <td>
+                <li>Interested?<a href="{% url 'register:registeruser' %}">Register Now!!!</a></li>
+            </td>
+            {% endif %}
+        </tr>
+
+
+    </table>
+  <p>About :
+    {{ book.review }}
+</p>
+    {% endfor %}
+
+{% if is_paginated %}
+  <ul class="pagination">
+    {% if page_obj.has_previous %}
+      <li><a href="?page={{ page_obj.previous_page_number }}">&laquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&laquo;</span></li>
+    {% endif %}
+    {% for i in paginator.page_range %}
+      {% if page_obj.number == i %}
+        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li><a href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if page_obj.has_next %}
+      <li><a href="?page={{ page_obj.next_page_number }}">&raquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&raquo;</span></li>
+    {% endif %}
+  </ul>
+{% endif %}
+
+
+{% endblock %}
